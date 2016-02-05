@@ -5,10 +5,10 @@ A.Understanding
   game Blitz Panic atau game tipe endless run serupa. Script menggunakan bahasa C#.
   
   1. EnviroGenerator.cs
-     Class abstract sebagai dasar pengembangan class turunannya. Programmer dapat menggunakan class ini sebagai template````        (override) untuk membuat class generator turunan sesuai kebutuhan dan logika game.
+     Class abstract sebagai dasar pengembangan class turunannya. Programmer dapat menggunakan class ini sebagai template(override) untuk membuat class generator turunan sesuai kebutuhan dan logika game.
   
     1.1. GroundGenerator.cs
-     Pengaplikasian template EnviroGenerator.cs(inherit) yang akan diaplikasikan pada GameObject ground. Gunakan class ini          (reuse) jika memang permasalahan atau logika generate yang dibangun cocok dengan script ini. 
+     Pengaplikasian template EnviroGenerator.cs(inherit) yang akan diaplikasikan pada GameObject ground. Gunakan class ini(reuse) jika memang permasalahan atau logika generate yang dibangun cocok dengan script ini. 
      Jika tidak, reuse EnviroGenerator.cs dan override method sesuai kebutuhan logika game.
      
     1.2. BackgroundGenerator.cs

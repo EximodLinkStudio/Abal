@@ -12,7 +12,7 @@ public class PrefabInstance : MonoBehaviour {
 		makeInstance ();
 	}
 
-	public void makeInstance(){
+	private void makeInstance(){
 		for (int i=0; i<prefab_list.Length; i++) {
 			GameObject newObj = (GameObject)Instantiate(prefab_list[i],initObj.transform.position,initObj.transform.rotation);
 			prefab_instance.Add(newObj);

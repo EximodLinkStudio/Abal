@@ -1,0 +1,34 @@
+Petunjuk penggunaan script untuk EnvironmentGenerator.
+
+A.Understanding
+  Pada folder ini terdapat beberapa script yang digunakan dalam menggenerate environment(backdrop,foreground,background) pada runtime. Script ini dikhususkan untuk
+  game Blitz Panic atau game tipe endless run serupa. Script menggunakan bahasa C#.
+  
+  1. EnviroGenerator.cs
+     Class abstract sebagai dasar pengembangan class turunannya. Programmer dapat menggunakan class ini sebagai template(override)
+     untuk membuat class generator turunan sesuai kebutuhan dan logika game.
+  
+  2. GroundGenerator.cs
+     Pengaplikasian template EnviroGenerator.cs(inherit) yang akan diaplikasikan pada GameObject ground. Gunakan class ini(reuse) 
+     jika memang permasalahan atau logika generate yang dibangun cocok dengan script ini. Jika tidak, reuse EnviroGenerator.cs dan override
+     method sesuai kebutuhan logika game.
+     
+  3. BackgroundGenerator.cs
+     Pengaplikasian template EnviroGenerator.cs(inherit) yang akan diaplikasikan pada GameObject seperti backdrop dan background. Gunakan 
+     class ini(reuse) jika memang permasalahan atau logika generate yang dibangun cocok dengan script ini. Jika tidak, reuse EnviroGenerator.cs dan override
+     method sesuai kebutuhan logika game.
+     
+  4. PrefabMeta.cs
+     Class abstract untuk menghandle atribut dari prefab. Reuse class ini dengan membuat class turunan sesuai game logic. 
+     Programmer dapat memilih menggunakan class ini atau tidak sesuai kebutuhan.
+     
+  5. GroundPrefab.cs
+     Turunan class PrefabMeta.cs untuk menambahkan atribut(width,height,maxboundX,minboundX,maxboundY,minboundY) pada prefab
+     yang diinginkan.
+  
+  6. PrefabInstance.cs   
+     Merupakan prefab manager pada framework environment generator ini. Menampung dan menginstance beberapa prefab yang 
+     nantinya akan digenerate saat runtime menjadi GameObject sehingga dapat digunakan di scene.
+     
+     
+B. How To Use

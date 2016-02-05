@@ -24,7 +24,7 @@ A.Understanding
      
   5. GroundPrefab.cs
      Turunan class PrefabMeta.cs untuk menambahkan atribut(width,height,maxboundX,minboundX,maxboundY,minboundY) pada prefab
-     yang diinginkan.
+     Ground.
   
   6. PrefabInstance.cs   
      Merupakan prefab manager pada framework environment generator ini. Menampung dan menginstance beberapa prefab yang 
@@ -32,3 +32,16 @@ A.Understanding
      
      
 B. How To Use
+  
+  1. GroundGenerator.cs,BackgroundGenerator.cs,PrefabInstance.cs
+     1.1. Buat empty GameObject sebagai generate manager. Ex: Jika ingin menggenerate Ground maka buat empty gameobject dengan
+          nama misal GroundManager.
+     1.2. Tambahkan script PrefabInstance.cs,GroundGenerator.cs/BackgroundGenerator.cs(sesuai fungsi).
+     1.3. Drag prefab pada project panel ke scene dan atur hirarkinya hingga prefab ini menjadi child dari GroundManager/nama            lain untuk manager. Prefab yang anda drag pertama ini akan menjadi initial prefab pada game.
+  2. GroundPrefab.cs
+     1.1. Pada saat anda membuat prefab, tambahkan script ini pada prefab. Pada kasus ini kita menggunakan GroundPrefab untuk 
+          menambah atribut pada prefab ground. Save/Apply prefab. 
+          NOTE: Ini dilakukan sebelum meng-assign prefab ke script PrefabInstance atau drag prefab ke hirarki sebagai 
+          child dari GameObject generator manager.
+          
+          
